@@ -3,6 +3,38 @@ Clear-Host
 $host.UI.RawUI.WindowTitle = "Created By: Zeyfr on Discord"
 $titleText = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($encodedTitle))
 
+
+$darkRed = [System.ConsoleColor]::DarkRed
+$white = [System.ConsoleColor]::White
+
+$art = @"
+                 ▄████▄   ▄████▄
+                 ██▀ ▀█   ██▀ ▀█
+                ▒▓█  ▄▄▄  ▓█  ▄▄▄
+                ▒▓▓▄ ▄██▒▒▓▓▄ ▄██░
+               ░▒ ▓███▀ ░░ ▓███▀░▒ 
+               ░░ ░▒ ▒  ░  ▒ ░░▒
+                  ░  ▒     ▒ ░▒
+                ░         ░   ░ 
+                   ░     ░  ░ 
+                            ░                             
+"@
+
+foreach ($char in $art.ToCharArray()) {
+    if ($char -match '[▒░▓]') {
+        Write-Host $char -ForegroundColor $darkRed -NoNewline
+    } else {
+        Write-Host $char -ForegroundColor $white -NoNewline
+    }
+}
+
+foreach ($char in $art.ToCharArray()) {
+    if ($char -match '[▒░▓]') {
+        Write-Host $char -ForegroundColor $darkRed -NoNewline
+    } else {
+        Write-Host $char -ForegroundColor $white -NoNewline
+    }
+}
 function Get-OneDrivePath {
     try {
         # Attempt to retrieve OneDrive path from registry
@@ -284,7 +316,7 @@ $targetFileDownloads = Join-Path -Path $downloadsPath -ChildPath "PcCheck.txt"
 Delete-FileIfExists -filePath $targetFileDesktop
 # Define colors
 $magenta = "Magenta"
-$red = "Red"
+$red = "White"
 $space = " " * 12  # Increased the number of spaces for more right alignment
 
 # Print the red "SCAN COMPLETE" line with more white space to the right
