@@ -3,7 +3,6 @@ Clear-Host
 $host.UI.RawUI.WindowTitle = "Created By: Zeyfr on Discord"
 $titleText = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($encodedTitle))
 
-
 $darkRed = [System.ConsoleColor]::DarkRed
 $white = [System.ConsoleColor]::White
 
@@ -320,7 +319,7 @@ $red = "White"
 $space = " " * 12  # Increased the number of spaces for more right alignment
 
 # Print the red "SCAN COMPLETE" line with more white space to the right
-Write-Host "`n$space╭─────────────────────────────────────╮" -ForegroundColor $red
+Write-Host "`$space╭─────────────────────────────────────╮" -ForegroundColor $red
 Write-Host "$space│            SCAN COMPLETE            │" -ForegroundColor $red
 Write-Host "$space╰─────────────────────────────────────╯" -ForegroundColor $red
 
