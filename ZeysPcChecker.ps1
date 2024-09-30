@@ -307,15 +307,15 @@ $targetFileDownloads = Join-Path -Path $downloadsPath -ChildPath "PcCheck.txt"
 Delete-FileIfExists -filePath $targetFileDesktop
 # Define colors
 $magenta = "Magenta"
-$red = "White"
+$red = "Red"
 $space = " " * 12  # Increased the number of spaces for more right alignment
 
 # Print the red "SCAN COMPLETE" line with more white space to the right
-Write-Host "`$space╭─────────────────────────────────────╮" -ForegroundColor $red
+Write-Host "`n$space╭─────────────────────────────────────╮" -ForegroundColor $red
 Write-Host "$space│            SCAN COMPLETE            │" -ForegroundColor $red
 Write-Host "$space╰─────────────────────────────────────╯" -ForegroundColor $red
 
 # Print the magenta border and text
 Write-Host "$space╭─────────────────────────────────────╮" -ForegroundColor $magenta
-Write-Host "$space│          Discord @zeyski       │" -ForegroundColor $magenta
+Write-Host "$space│          Discord @zeyski        │" -ForegroundColor $magenta
 Write-Host "$space╰─────────────────────────────────────╯" -ForegroundColor $magenta
