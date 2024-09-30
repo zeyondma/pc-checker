@@ -26,14 +26,6 @@ foreach ($char in $art.ToCharArray()) {
         Write-Host $char -ForegroundColor $white -NoNewline
     }
 }
-
-foreach ($char in $art.ToCharArray()) {
-    if ($char -match '[▒░▓]') {
-        Write-Host $char -ForegroundColor $darkRed -NoNewline
-    } else {
-        Write-Host $char -ForegroundColor $white -NoNewline
-    }
-}
 function Get-OneDrivePath {
     try {
         # Attempt to retrieve OneDrive path from registry
